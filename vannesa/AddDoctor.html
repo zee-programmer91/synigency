@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddDoctor</title>
+
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+</head>
+<body>
+
+
+    <form>
+        <p>
+          <fieldset>
+
+            <p>
+                <label for="firstname">First Name </label>
+                <input id="firstname" name="fname" type="text" required>
+              </p>
+
+
+              <p>
+                <label for="lastname">Last Name </label>
+                <input id="lastname" name="lname" type="text" required>
+              </p>
+            <p>
+                <label for="IDnumber">ID Number</label>
+                <input type="id" id="IDnumber" name="id">
+              </p>
+
+              <p>
+                <label for="RegistrationNumber">Doctor Registaration Number</label>
+                <input type="id" id="RegistrationNumber" name="id">
+              </p>
+              <!-- <p>
+                <label for="Speciality">Speciality</label>
+                <input type="Text" min="12" max="120" step="1" id="Speciality" name="age"
+                pattern="\d+"> 
+              </p> -->
+
+
+              <p>
+                <label>
+                  Speciality
+                <br />
+                <select name="specializationList">
+                        <option>--None--</option>
+                  <option>General practitioner</option>
+                  <option>obstetrician and gynaecologist</option>
+                  <option>Psychiatrist</option>
+                  <option>Dentist</option>
+                  <option>General surgeon</option>
+                  <option>Dermatologist</option>
+                       
+                </select>
+                </label>
+              </p>
+
+        
+        <p>
+          <button>Add</button>
+        </p>
+      </form>
+      
+    
+</body>
+</html>
