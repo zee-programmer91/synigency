@@ -1,66 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
 </head>
+
 <body>
 
-<h1>Please complete the form below to register your clinic/hospital:</h1>
+    <h1>Please complete the form below to register your clinic/hospital:</h1>
 
-<form action="http://127.0.0.1:8000/medlyft/registration/" method="post">
+    <form action="registration/" method="post">
+        {% csrf_token %}
+        <label for="Name">Clinic Name:</label><br>
+        <input type="text" name="Name" id="Name" autocomplete ="on" autofocus required>
+        <br>
+        <br>
+        <label for="Province">Province:</label>
+        <br>
+        <select name="Province" id="Province" autocomplete="on" required autofocus>
+            <option value="None" disabled>None</option>
+            <option value="Gauteng">Gauteng</option>
+            <option value="Free State">Free State</option>
+            <option value="North West">North West</option>
+            <option value="Eastern Cape">Eastern Cape</option>
+            <option value="Northern Cape">Northern Cape</option>
+            <option value="Kwa-Zulu Natal">Kwa-Zulu Natal</option>
+            <option value="Limpopo">Limpopo</option>
+            <option value="Western Cape">Western Cape</option>
+            <option value="Mpumalanga">Mpumalanga</option>
+            <option></option>
+        </select>
 
-    <p>
-        <label for="Name">Clinic Name: <br> </label>
-        <input type="text" name="Name" id="Name" autocomplete ="on" required autofocus>
-    </p>
-
-    <p>
-        <label>
-            Province
-            <br />
-            <select name="Province">
-                <option>--None--</option>
-                <option>Gauteng</option>
-                <option>Free State</option>
-                <option>North West</option>
-                <option>Eastern Cape</option>
-                <option>Kwa-Zulu_Natal</option>
-                <option>Limpopo</option>
-                <option>Northern Cape</option>
-                <option>Mpumalanga</option>
-                <option></option>
-            </select>
-        </label>
-    </p>
-
-    <p>
-        <label for="Region">Region/Municipality: <br> </label>
+        <br><br>
+        <label for="Region">Region/Municipality:</label><br>
         <input type="text" name="Region" id="Region" autocomplete ="on" required autofocus>
-    </p>
-
-    <p>
-        <label for="Ward">Ward Number: <br> </label>
+        <br>
+        <br>
+        <label for="Ward">Ward Number:</label><br>
         <input type="text" name="Ward" id="Ward" autocomplete ="on" required autofocus>
-    </p>
-
-    <p>
-        <label for="phone">Telephone Number: <br> </label>
-        <input type="tel" name="phone" id="phone"  required>
-    </p>
-
-    <p>
-        <label for="password"><b>Password : <br> </b></label>
-        <input type="password" name="password" id="password" required>
-    </p>
-
-    <p>
-        <label for="confirmPassword"><b>Confirm Password:<br> </b></label>
-        <input type="password" name="confirmPassword" id="confirmPassword" required>
-    <p>
-
-        <button type="submit" href="login_page.html">Register </button>
-    </p>
-</form>
+        <br>
+        <br>
+        <label for="Phone">Telephone Number:</label><br>
+        <input type="text" name="Phone" id="Phone"  required>
+        <br>
+        <br>
+        <label for="Password">Password:</label><br>
+        <input type="password" name="Password" id="Password" required>
+        <br>
+        <br>
+        <label for="ConfirmPassword">Confirm Password:</label><br>
+        <input type="password" name="ConfirmPassword" id="ConfirmPassword" required>
+        <br>
+        <br>
+        
+        <input type="submit" value="Register">
+    </form>
 </body>
+
 </html>
