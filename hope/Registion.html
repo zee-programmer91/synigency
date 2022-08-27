@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registion</title>
+</head>
+<body>
+
+    <h1>Please complete the form below to register your clinic/hospital:</h1>
+
+    <p>
+        <label for="Name">Clinic/Hospital Name: <br> </label>
+        <input type="text" name="Name" id="Name" autocomplete ="on" required autofocus>
+    </p>
+
+    <p>
+        <label for="Region">Region/Municipality: <br> </label>
+        <input type="text" name="Region" id="Region" autocomplete ="on" required autofocus>
+    </p>
+ 
+    <p>
+        <label for="Ward">Ward Number: <br> </label>
+        <input type="text" name="Ward" id="Ward" autocomplete ="on" required autofocus>
+    </p>
+
+    <p>
+    
+        <label for ="unit">Unit/Center Number:<br> </label>
+        <input type="Unumber" name="Unumber" required>
+        
+    </p>
+
+    <p>
+		<label>
+            Province
+		<br />
+		<select name="Province">
+            <option>--None--</option>
+			<option>Gauteng</option>
+			<option>Free State</option>
+			<option>North West</option>
+			<option>Eastern Cape</option>
+			<option>Kwa-Zulu_Natal</option>
+			<option>Limpopo</option>
+            <option>Northern Cape</option>
+			<option></option>
+		</select>
+		</label>
+	</p>
+
+    <p>
+        <label>Email Address:<br><input type="email" name="email" /></label>
+    </p>
+
+    <p>
+        <label for="phone">Phone Number: <br> </label>
+        <input type="tel" name="phone" id="phone"  required>
+    </p>
+
+<p>
+<label for="psw"><b>Password : <br> </b></label>
+          <input type="password" name="psw" id="psw" required>
+        </p>
+<p>
+<label for="psw-repeat"><b>Confirm Password:<br> </b></label>
+          <input type="password" name="psw-repeat" id="psw-repeat" required>
+
+<!-- <p>
+    <label>
+    Address :
+    <br />
+    <textarea name="address" cols="30" rows="3"></textarea>
+    </label>
+</p> -->
+
+<p>
+    <button type="submit" href="login_page.html">Register </button>
+</p>
+</body>
+</html>
