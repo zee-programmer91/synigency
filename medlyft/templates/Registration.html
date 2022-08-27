@@ -8,7 +8,8 @@
 
 <h1>Please complete the form below to register your clinic/hospital:</h1>
 
-<form>
+<form action="http://127.0.0.1:8000/medlyft/registration/" method="post">
+
     <p>
         <label for="Name">Clinic Name: <br> </label>
         <input type="text" name="Name" id="Name" autocomplete ="on" required autofocus>
@@ -49,13 +50,13 @@
     </p>
 
     <p>
-        <label for="psw"><b>Password : <br> </b></label>
-        <input type="password" name="psw" id="psw" required>
+        <label for="password"><b>Password : <br> </b></label>
+        <input type="password" name="password" id="password" required>
     </p>
 
     <p>
-        <label for="psw-repeat"><b>Confirm Password:<br> </b></label>
-        <input type="password" name="psw-repeat" id="psw-repeat" required>
+        <label for="confirmPassword"><b>Confirm Password:<br> </b></label>
+        <input type="password" name="confirmPassword" id="confirmPassword" required>
     <p>
 
         <button type="submit" href="login_page.html">Register </button>
