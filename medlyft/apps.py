@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class MedilyftConfig(AppConfig):
+class MedlyftConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'medilyft'
+    name = 'medlyft'
