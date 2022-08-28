@@ -1,39 +1,38 @@
-body{
-    background-color :rgb(224, 17, 17);
+.h1 {
+    background-color: #4CAF50;
+    text-align: center;
 }
 
-.hone{
+.button {
     background-color: blue;
-    font-size: 22px;
-}
-.hhh{
-    
-    width :200;
-    height: 200px;
-
+    font-size: 30px;
 }
 
-.htwo{
-    background-color: yellow;
-    font-size: 20px;
+.button:hover {
+    background-color: #4CAF50;
 }
 
-.hthree{
-    background-color: green;
-    font-size: 18px;
+body {
+    background-image: url('Image.jpeg');
 }
-a{
-    color: green;
-}
-a:visited{
-    color: white;
-}
-a:hover, a:active{
-    color:#eee;}
 
-table,tr, th,td, caption{
+.text {
+    font-size: 12px;
+}
+
+.txtbox {
+    height: 42px;
+    width: 300px;
+    padding: 1000;
+}
+
+table,
+tr,
+th,
+td,
+caption {
     border: 1px solid #eee;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     border-collapse: collapse;
     padding: 0.5rem;
 }
