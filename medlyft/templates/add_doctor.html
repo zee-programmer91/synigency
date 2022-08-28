@@ -22,11 +22,12 @@
 </head>
 <body>
 
-  <form>
+  <form action="save_doctor" method="post">
+    {% csrf_token %}
     <p>
       <fieldset>
         <p>
-          <label for="institution">First Name </label>
+          <label for="institution">Institution </label>
           <input id="institution" name="institution" type="text" value="{{clinic.clinic_name}}" disabled>
         </p>
 
@@ -47,7 +48,7 @@
 
         <p>
           <label for="RegistrationNumber">Doctor Registaration Number</label>
-          <input type="id" id="RegistrationNumber" name="id">
+          <input type="id" id="RegistrationNumber" name="reg_id">
         </p>
           <!-- <p>
             <label for="Speciality">Speciality</label>
@@ -74,10 +75,9 @@
         </p>
 
         <p>
-          <input type="button" value="Add">
+          <input type="submit" value="Add">
         </p>
       </fieldset>
-    </p>
 
   </form>
 
