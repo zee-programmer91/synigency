@@ -17,7 +17,14 @@ class Doctor(models.Model):
     registration_number = models.IntegerField()
     speciality = models.CharField(max_length=225)
 
-
+class Patient(models.Model):
+    firstname = models.CharField(max_length=225)
+    lastname = models.CharField(max_length=225)
+    IDnumber = models.CharField(max_length=13)
+    FolderNumber = models.IntegerField()
+    phone = models.IntegerField()
+    Email = models.CharField(max_length=225)
+    address1 = models.CharField(max_length=255)
 
 
 

@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AddPatient</title>
-    <link rel="stylesheet" href="css/styles.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'add_doc_and_pat.css' %}">
 
 </head>
 <body >
 
 
-    <form>
+    <form action="save_patient" method="post">
+      {% csrf_token %}
         <p>
           <fieldset>
 
@@ -25,33 +27,29 @@
               <p>
                 <label for="lastname">Last Name </label> </p>
 
-               <p> <input id="lastname" name="fname" type="text" required>
+               <p> <input id="lastname" name="lname" type="text" required>
               </p>
             <p>
                 <label for="IDnumber">ID Number</label>
                 </p>
-
-
                 <p>
-                <input type="id" id="IDnumber" name="id">
-              </p>
-
-
-              <p>
-                <label for="IDnumber">Folder Number</label>
+                <input type="number" id="IDnumber" name="id">
               </p>
 
               <p>
-                <input type="number" min="1" max="120" step="1" id="IDnumber" name="age"
+                <label for="FolderNumber">Folder Number</label>
+              </p>
+
+              <p>
+                <input type="number" min="1" max="120" step="1" id="FolderNumber" name="fnumber"
                 pattern="\d+"> 
               </p>
 
               <p>
                 <label for="phone">cell phone number</label>
               </p>
-              
                <p> <input type="tel" id="phone" name="phone"
-                pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="071 234 5678"
+                pattern="[0-9]{10}" placeholder="0712345678"
                 required>
               </p>
 
@@ -70,7 +68,7 @@
           </p>
        
         <p>
-          <input type="submit" value="Add">
+          <input type="submit" value="Add Patient">
         </p>
       </form>
       
