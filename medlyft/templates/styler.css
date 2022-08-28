@@ -1,0 +1,56 @@
+
+body{
+    background-image: url("doc.jpg");
+    background-color: lightgray;
+    text-align: center;
+}
+
+h1{
+   color: red;
+}
+
+label{
+    font-weight: bold;
+}
+
+input[type=text] {
+  width: 45%;
+  padding: 10px 10px;
+  border-color: red;
+  margin: 8px 0;
+  border-radius:10px;
+  box-sizing: border-box;
+}
+
+input[type=password] {
+  width: 45%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border-color: red;
+  border-radius:10px;
+  box-sizing: border-box;
+}
+.pro{
+    width: 45%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border-color: red;
+    border-radius:10px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+   background-color: #0000FF;
+   color: #fff;
+   border: none;
+   border-radius: 20px;
+   margin-left: 550px;
+   display: block;
+   width: 15%;
+   cursor: pointer;
+   font-size: 15px;
+   font-family: inherit;
+   padding: 15px 15px;
+}
+input[type=submit]:hover{
+  background-color: #008000;
+}

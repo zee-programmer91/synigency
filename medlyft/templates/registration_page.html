@@ -3,59 +3,79 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styler.css" type="text/css">
     <title>Registration</title>
 </head>
 
 <body>
 
-    <h1>Please complete the form below to register your clinic/hospital:</h1>
+<h1 style=" width: 50vw; margin-left : 25vw">Please complete the form below to register your clinic:</h1>
 
-    <form action="registration/" method="post">
-        {% csrf_token %}
-        <label for="Name">Clinic Name:</label><br>
-        <input type="text" name="Name" id="Name" autocomplete ="on" autofocus required>
-        <br>
-        <br>
-        <label for="Province">Province:</label>
-        <br>
-        <select name="Province" id="Province" autocomplete="on" required autofocus>
-            <option value="None" disabled>None</option>
-            <option value="Gauteng">Gauteng</option>
-            <option value="Free State">Free State</option>
-            <option value="North West">North West</option>
-            <option value="Eastern Cape">Eastern Cape</option>
-            <option value="Northern Cape">Northern Cape</option>
-            <option value="Kwa-Zulu Natal">Kwa-Zulu Natal</option>
-            <option value="Limpopo">Limpopo</option>
-            <option value="Western Cape">Western Cape</option>
-            <option value="Mpumalanga">Mpumalanga</option>
-            <option></option>
-        </select>
+<form action="registration/" method="post" >
+    <span hidden>{% csrf_token %}</span>
+    <label for="Name">Clinic Name:</label><br>
+    <input type="text" name="Name" id="Name" autocomplete ="on" autofocus required>
+    <br>
+    <br>
+    <label for="Province">Province:</label>
+    <br>
+    <select class="pro" name="Province" id="Province" autocomplete="on" required autofocus>
+        <option value="None" > </option>
+        <option value="Gauteng">Gauteng</option>
+        <option value="Free State">Free State</option>
+        <option value="North West">North West</option>
+        <option value="Eastern Cape">Eastern Cape</option>
+        <option value="Northern Cape">Northern Cape</option>
+        <option value="Kwa-Zulu Natal">Kwa-Zulu Natal</option>
+        <option value="Limpopo">Limpopo</option>
+        <option value="Western Cape">Western Cape</option>
+        <option value="Mpumalanga">Mpumalanga</option>
+    </select>
 
-        <br><br>
-        <label for="Region">Region/Municipality:</label><br>
-        <input type="text" name="Region" id="Region" autocomplete ="on" required autofocus>
-        <br>
-        <br>
-        <label for="Ward">Ward Number:</label><br>
-        <input type="text" name="Ward" id="Ward" autocomplete ="on" required autofocus>
-        <br>
-        <br>
-        <label for="Phone">Telephone Number:</label><br>
-        <input type="text" name="Phone" id="Phone"  required>
-        <br>
-        <br>
-        <label for="Password">Password:</label><br>
-        <input type="password" name="Password" id="Password" required>
-        <br>
-        <br>
-        <label for="ConfirmPassword">Confirm Password:</label><br>
-        <input type="password" name="ConfirmPassword" id="ConfirmPassword" required>
-        <br>
-        <br>
-        
-        <input type="submit" value="Register">
-    </form>
+    <br><br>
+    <label for="Region">Region/Municipality:</label><br>
+    <input type="text" name="Region" id="Region" autocomplete ="on" required autofocus>
+    <br>
+    <br>
+    <label for="ward">Ward:</label>
+    <br>
+    <select class="pro" name="Ward" id="Ward" autocomplete="on" required autofocus>
+
+        <option value="None" > </option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+    </select><br>
+
+    <br>
+    <br>
+    <label for="Phone">Telephone Number:</label><br>
+    <input type="text" name="Phone" id="Phone"  required>
+    <br>
+    <br>
+    <label for="Password">Password:</label><br>
+    <input type="password" name="Password" id="Password" required>
+    <br>
+    <br>
+    <label for="ConfirmPassword">Confirm Password:</label><br>
+    <input type="password" name="ConfirmPassword" id="ConfirmPassword" required>
+    <br>
+    <br>
+
+    <input type="submit" value="Register" size="500">
+</form>
 </body>
 
 </html>
