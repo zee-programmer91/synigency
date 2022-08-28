@@ -5,9 +5,39 @@ from django.urls import reverse
 from .models import Clinic
 
 
+def add_doctor(request):
+   clinic_name = request.GET.get('add_doctor')
+   print("clinic name:", clinic_name)
+   template = loader.get_template("add_doctor.html")
+
+   clinic = {
+      "clinic_names": clinic_name
+   }
+
+   content = {
+      "clinic": clinic,
+   }
+
+   return HttpResponse(template.render(content, request))
+
+
+def add_patient(request):
+   pass
+
+
 def index(request):
-   template = loader.get_template("Registration.html")
+   template = loader.get_template("registration_page.html")
    return HttpResponse(template.render({}, request))
+
+
+def register_home(request):
+   clinic = Clinic.objects.all()[0]
+   template = loader.get_template("registration_home.html")
+   content = {
+      'clinic': clinic,
+   }
+
+   return HttpResponse(template.render(content, request))
 
 
 def registration(request):
@@ -28,15 +58,5 @@ def registration(request):
 
    clinic.save()
 
-   return HttpResponseRedirect(reverse('index'))
-
-
-def redirect(request):
-   clinic = Clinic.objects.all()[0]
-   template = loader.get_template("redirect.html")
-   content = {
-      'clinic': clinic,
-   }
-
-   return HttpResponse(template.render(content, request))
+   return HttpResponseRedirect(reverse('registration_home'))
 
