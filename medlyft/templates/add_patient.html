@@ -5,22 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AddPatient</title>
-    <style>
-      body {
-        background-color: #fff;
-        color: #333;
-        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
-        padding: 1em;
-        margin: 0;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
-<body>
+<body >
 
 
     <form>
@@ -29,44 +17,60 @@
 
             <p>
                 <label for="firstname">First Name </label>
-                <input id="firstname" name="fname" type="text" required>
+                </p>
+               <p> <input id="firstname" name="fname" type="text" required>
               </p>
 
 
               <p>
-                <label for="lastname">Last Name </label>
-                <input id="lastname" name="fname" type="text" required>
+                <label for="lastname">Last Name </label> </p>
+
+               <p> <input id="lastname" name="fname" type="text" required>
               </p>
             <p>
                 <label for="IDnumber">ID Number</label>
+                </p>
+
+
+                <p>
                 <input type="id" id="IDnumber" name="id">
               </p>
+
+
               <p>
                 <label for="IDnumber">Folder Number</label>
+              </p>
+
+              <p>
                 <input type="number" min="1" max="120" step="1" id="IDnumber" name="age"
                 pattern="\d+"> 
               </p>
 
               <p>
                 <label for="phone">cell phone number</label>
-                <input type="tel" id="phone" name="phone"
+              </p>
+              
+               <p> <input type="tel" id="phone" name="phone"
                 pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="071 234 5678"
                 required>
               </p>
 
               
-            
-          <label for="Email">What's your e-mail address?</label>
-          <input type="email" id="Email" name="email">
+           <p> <label for="Email">What's your e-mail address?</label> </p> 
+         
+         <p> <input type="email" id="Email" name="email">
         </p>
 
         <p>
             <label for="address1">Address</label>
+
+        </p>
+        <p>
             <input id="address1" name="address1" type="text" required>
           </p>
        
         <p>
-          <button>Add Patient</button>
+          <input type="submit" value="Add">
         </p>
       </form>
       

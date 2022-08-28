@@ -1,0 +1,33 @@
+
+body {
+    background-color: #5F9EA0;
+    background-image : url("../images/types-of-doctors-1600114658.jpg") ; 
+    color: #333;
+    font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 1em;
+    margin: 0;
+    /* text-align: center; */
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  input[type=button],input[type=submit]{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  input[type=text], input[type=id] ,input[type=email],input[type=tel] ,input[type=number]{
+    width: 45%;
+    padding: 10px 20px; 
+  }
+  .vee{
+    width: 45%;
+    padding: 10px 20px; 
+  }

@@ -4,82 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AddDoctor</title>
+    <title>AddPatient</title>
+    <link rel="stylesheet" href="css/styles.css">
 
-    <style>
-      body {
-        background-color: #fff;
-        color: #333;
-        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
-        padding: 1em;
-        margin: 0;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-    </style>
 </head>
-<body>
+<body >
 
-  <form action="save_doctor" method="post">
-    {% csrf_token %}
-    <p>
-      <fieldset>
+
+    <form>
         <p>
-          <label for="institution">Institution </label>
-          <input id="institution" name="institution" type="text" value="{{clinic.clinic_name}}" disabled>
+          <fieldset>
+
+            <p>
+                <label for="firstname">First Name </label>
+                </p>
+               <p> <input id="firstname" name="fname" type="text" required>
+              </p>
+
+
+              <p>
+                <label for="lastname">Last Name </label> </p>
+
+               <p> <input id="lastname" name="fname" type="text" required>
+              </p>
+            <p>
+                <label for="IDnumber">ID Number</label>
+                </p>
+
+
+                <p>
+                <input type="id" id="IDnumber" name="id">
+              </p>
+
+
+              <p>
+                <label for="IDnumber">Folder Number</label>
+              </p>
+
+              <p>
+                <input type="number" min="1" max="120" step="1" id="IDnumber" name="age"
+                pattern="\d+"> 
+              </p>
+
+              <p>
+                <label for="phone">cell phone number</label>
+              </p>
+              
+               <p> <input type="tel" id="phone" name="phone"
+                pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="071 234 5678"
+                required>
+              </p>
+
+              
+           <p> <label for="Email">What's your e-mail address?</label> </p> 
+         
+         <p> <input type="email" id="Email" name="email">
         </p>
 
         <p>
-          <label for="firstname">First Name </label>
-          <input id="firstname" name="fname" type="text" required>
-        </p>
+            <label for="address1">Address</label>
 
+        </p>
         <p>
-          <label for="lastname">Last Name </label>
-          <input id="lastname" name="lname" type="text" required>
-        </p>
-
-        <p>
-          <label for="IDnumber">ID Number</label>
-          <input type="id" id="IDnumber" name="id">
-        </p>
-
-        <p>
-          <label for="RegistrationNumber">Doctor Registaration Number</label>
-          <input type="id" id="RegistrationNumber" name="reg_id">
-        </p>
-          <!-- <p>
-            <label for="Speciality">Speciality</label>
-            <input type="Text" min="12" max="120" step="1" id="Speciality" name="age"
-            pattern="\d+"> 
-          </p> -->
-
-
-        <p>
-          <label>
-            Speciality
-          <br />
-          <select name="specializationList">
-                  <option>--None--</option>
-            <option>General practitioner</option>
-            <option>obstetrician and gynaecologist</option>
-            <option>Psychiatrist</option>
-            <option>Dentist</option>
-            <option>General surgeon</option>
-            <option>Dermatologist</option>
-                  
-          </select>
-          </label>
-        </p>
-
+            <input id="address1" name="address1" type="text" required>
+          </p>
+       
         <p>
           <input type="submit" value="Add">
         </p>
-      </fieldset>
-
-  </form>
-
+      </form>
+      
+    
 </body>
 </html>
