@@ -1,0 +1,204 @@
+body{
+    background-color: grey !important;
+    padding-top: 50px;
+    background-image: url("https://hips.hearstapps.com/hmg-prod/images/types-of-doctors-1600114658.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+   
+}
+.container{
+    width: 800px;
+    height: 400px;
+    position: relative;
+    margin-left: 450px;
+  
+  }
+  .nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 38px; */
+  }
+  .navigation{
+    margin-left: 14px;
+    margin-right: 12px;
+    text-transform:uppercase;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+    width: 20px;
+   
+    
+  }
+  .navigation a{
+    color:red;
+    text-decoration: none;
+    transition: color 0.5s;
+    font-weight: bold;
+  }
+
+  .navigation:hover{
+    border-bottom: 1px #336964;
+  }
+  .navigation a:hover{
+    color: green;
+  }
+  .logo {
+    width: 120px;
+    margin-top: 16px;
+    cursor: pointer;
+    
+  }
+
+  #logo-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .nav-pad {
+    padding-top: 4%;
+  }
+
+  /* * {
+    border: 1px solid red;
+  } */
+
+  form{
+    padding: 40px;
+    padding-bottom: 0%;
+    width: 50%;
+    background-color: #F2F2F2;
+
+}
+input[type=text]{
+  width: 45%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: solid 1px RGB(204,204,204);
+}
+h1{
+  color:red;
+}
+
+#Additional-Information{
+  width: 50%;
+  padding-bottom: 20px;
+}
+input[type=submit]{
+    background-color: RGB(76,175,80);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border: 0px;
+}
+input[type=submit]:hover{
+    border: none;
+    background-color:RGB(69,160,73);
+}
+.wrapping{
+  width: 800px;
+  height: 400px;
+  position: relative;
+  margin-left: 20px;
+
+}
+
+/* style for Login*/
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#user-type{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+ button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 10%;
+  border-radius: 20%;
+}
+
+/* Add padding to containers */
+.container-class {
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+} 
+
+
+/* * {
+  border: 1px solid red;
+} */
