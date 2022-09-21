@@ -7,71 +7,73 @@
     <title>AddPatient</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'add_doc_and_pat.css' %}">
-
 </head>
 <body >
+  <header>
+    <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
+    <h2>Medlyft</h2>
+    <p>This is where the trademark will be</p>
+  </header>
 
-
-    <form action="save_doctor" method="post">
+  <main>
+    <form action="/medlyft/save-doctor" method="post">
       {% csrf_token %}
-        <p>
-          <fieldset>
-            <p>
-              <label for="institution">Institution </label>
-              <input id="institution" name="institution" type="text" value="{{clinic.clinic_name}}" disabled>
-            </p>
-            <p>
-              <label for="firstname">First Name </label>
-              </p>
-            <p> 
-              <input id="firstname" name="fname" type="text" required>
-            </p>
-
-            <p>
-              <label for="lastname">Last Name </label> 
-            </p>
-             <p>
-               <input id="lastname" name="lname" type="text" required>
-            </p>
-
-            <p>
-                <label for="IDnumber">ID Number</label>
-                </p>
-                <p>
-                <input type="id" id="IDnumber" name="id">
-              </p>
-
-
-              <p>
-                <label for="RegistrationNumber">Doctor Registration Number</label>
-              </p>
-              <p>
-                <input type="number" id="RegistrationNumber" name="reg_id"> 
-              </p>
-            <p>
-              <label>
-                Speciality
-              <br />
-              <select name="specializationList">
-                      <option>--None--</option>
-                <option>General practitioner</option>
-                <option>obstetrician and gynaecologist</option>
-                <option>Psychiatrist</option>
-                <option>Dentist</option>
-                <option>General surgeon</option>
-                <option>Dermatologist</option>
-                      
-              </select>
-              </label>
-            </p>
-    
-            <p>
-              <input type="submit" value="Add Doctor">
-            </p>
-          </fieldset>
+      <p>
+        <label for="institution">Institution </label>
+        <input id="institution" name="institution" type="text" value="{{clinic.clinic_name}}" disabled>
+      </p>
+      <p>
+        <label for="firstname">First Name </label>
         </p>
-      </form>
-      
-    
+      <p> 
+        <input id="firstname" name="fname" type="text" required>
+      </p>
+
+      <p>
+        <label for="lastname">Last Name </label> 
+      </p>
+      <p>
+        <input id="lastname" name="lname" type="text" required>
+      </p>
+
+      <p>
+        <label for="IDnumber">ID Number</label>
+        </p>
+        <p>
+        <input type="id" id="IDnumber" name="id">
+      </p>
+
+      <p>
+        <label for="RegistrationNumber">Doctor Registration Number</label>
+      </p>
+      <p>
+        <input type="number" id="RegistrationNumber" name="reg_id"> 
+      </p>
+
+      <p>
+        <label>
+          Speciality
+        </label>
+        <br>
+        <select name="specializationList">
+          <option>--None--</option>
+          <option>General practitioner</option>
+          <option>obstetrician and gynaecologist</option>
+          <option>Psychiatrist</option>
+          <option>Dentist</option>
+          <option>General surgeon</option>
+          <option>Dermatologist</option>
+        </select>
+      </p>
+
+      <p>
+        <input type="submit" value="Add Doctor">
+      </p>
+    </form>
+  </main>
+
+  <footer>
+    Copyright &copy; 2022, Synigency, Inc. All
+  </footer>
 </body>
 </html>

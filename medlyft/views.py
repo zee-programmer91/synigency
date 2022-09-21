@@ -19,7 +19,12 @@ def add_patient(request):
 
 
 def index(request):
-    template = loader.get_template("registration_page.html")
+    template = loader.get_template("home.html")
+    return HttpResponse(template.render({}, request))
+
+
+def login(request):
+    template = loader.get_template("login.html")
     return HttpResponse(template.render({}, request))
 
 
@@ -31,6 +36,11 @@ def register_home(request):
     }
 
     return HttpResponse(template.render(content, request))
+
+
+def registration_register(request):
+    template = loader.get_template("registration_register.html")
+    return HttpResponse(template.render({}, request))
 
 
 def registration(request):

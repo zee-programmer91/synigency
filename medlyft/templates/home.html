@@ -4,10 +4,9 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <title>Document</title>
    {% load static %}
    <link rel="stylesheet" href="{% static 'home.css' %}">
+   <title>Home</title>
 </head>
 <body>
    <header>
@@ -16,12 +15,13 @@
       <p>This is where the trademark will be</p>
    </header>
 
-   <main>
-      <h1>Welcome to Sweden, {{clinic.clinic_name}}</h1>
+   <nav>
+      <a href="/medlyft/login" class="login">LOGIN</a>
+      <a href="/medlyft/registration" class="register">REGISTER</a>
+   </nav>
 
-      <a href="/medlyft/add-doctor" name="add_doctor" value="{{clinic.clinic_name}}">Add Doctor</a>
-      <br>
-      <a href="/medlyft/add-patient">Add Patient</a>
+   <main>
+      
    </main>
 
    <footer>

@@ -7,71 +7,76 @@
     <title>AddPatient</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'add_doc_and_pat.css' %}">
-
 </head>
+
 <body >
+  <header>
+    <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
+    <h2>Medlyft</h2>
+    <p>This is where the trademark will be</p>
+  </header>
 
-
-    <form action="save_patient" method="post">
+  <main>
+    <form action="/medlyft/save-patient" method="post">
       {% csrf_token %}
-        <p>
-          <fieldset>
+      <p>
+        <label for="firstname">First Name </label>
+      </p>
+      <p>
+        <input id="firstname" name="fname" type="text" required>
+      </p>
 
-            <p>
-                <label for="firstname">First Name </label>
-                </p>
-               <p> <input id="firstname" name="fname" type="text" required>
-              </p>
+      <p>
+        <label for="lastname">Last Name </label>
+      </p>
+      <p>
+        <input id="lastname" name="lname" type="text" required>
+      </p>
 
+      <p>
+        <label for="IDnumber">ID Number</label>
+      </p>
+      <p>
+        <input type="number" id="IDnumber" name="id">
+      </p>
 
-              <p>
-                <label for="lastname">Last Name </label> </p>
+      <p>
+        <label for="FolderNumber">Folder Number</label>
+      </p>
 
-               <p> <input id="lastname" name="lname" type="text" required>
-              </p>
-            <p>
-                <label for="IDnumber">ID Number</label>
-                </p>
-                <p>
-                <input type="number" id="IDnumber" name="id">
-              </p>
+      <p>
+        <input type="number" min="1" max="120" step="1" id="FolderNumber" name="fnumber" pattern="\d+"> 
+      </p>
 
-              <p>
-                <label for="FolderNumber">Folder Number</label>
-              </p>
+      <p>
+        <label for="phone">cell phone number</label>
+      </p>
+      <p>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0712345678" required>
+      </p>
 
-              <p>
-                <input type="number" min="1" max="120" step="1" id="FolderNumber" name="fnumber"
-                pattern="\d+"> 
-              </p>
+      <p>
+        <label for="Email">What's your e-mail address?</label>
+      </p> 
+      <p>
+        <input type="email" id="Email" name="email">
+      </p>
 
-              <p>
-                <label for="phone">cell phone number</label>
-              </p>
-               <p> <input type="tel" id="phone" name="phone"
-                pattern="[0-9]{10}" placeholder="0712345678"
-                required>
-              </p>
-
-              
-           <p> <label for="Email">What's your e-mail address?</label> </p> 
-         
-         <p> <input type="email" id="Email" name="email">
-        </p>
-
-        <p>
-            <label for="address1">Address</label>
-
-        </p>
-        <p>
-            <input id="address1" name="address1" type="text" required>
-          </p>
-       
-        <p>
-          <input type="submit" value="Add Patient">
-        </p>
-      </form>
+      <p>
+        <label for="address1">Address</label>
+      </p>
+      <p>
+        <input id="address1" name="address1" type="text" required>
+      </p>
       
-    
+      <p>
+        <input type="submit" value="Add Patient">
+      </p>
+    </form>
+  </main>
+
+  <footer>
+    Copyright &copy; 2022, Synigency, Inc. All
+  </footer>
 </body>
 </html>
