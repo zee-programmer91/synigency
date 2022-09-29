@@ -18,13 +18,45 @@ def add_patient(request):
     return HttpResponse(template.render({}, request))
 
 
+def patientPage(request):
+    template = loader.get_template("patientPage.html")
+
+    return HttpResponse(template.render({}, request))
+
+
+def doctorsPage(request):
+    template = loader.get_template("doctorsPage.html")
+
+    return HttpResponse(template.render({}, request))
+
+
 def index(request):
     template = loader.get_template("home.html")
     return HttpResponse(template.render({}, request))
 
 
+def loginpatient(request):
+    template = loader.get_template("loginpatient.html")
+    return HttpResponse(template.render({}, request))
+
+
+def addminlogin(request):
+    template = loader.get_template("addminlogin.html")
+    return HttpResponse(template.render({}, request))
+
+
+def logindoctor(request):
+    template = loader.get_template("logindoctor.html")
+    return HttpResponse(template.render({}, request))
+
+
 def login(request):
     template = loader.get_template("login.html")
+    return HttpResponse(template.render({}, request))
+
+
+def admin(request):
+    template = loader.get_template("admin.html")
     return HttpResponse(template.render({}, request))
 
 
@@ -82,6 +114,7 @@ def save_doctor(request):
 
     return HttpResponseRedirect(reverse('registration_home'))
 
+
 def save_patient(request):
     firstname = request.POST['fname']
     lastname = request.POST['lname']
@@ -89,16 +122,16 @@ def save_patient(request):
     folder_number = request.POST['fnumber']
     phone = request.POST['phone']
     Email = request.POST['email']
-    address1 =request.POST['address1']
+    address1 = request.POST['address1']
 
     patient = Patient(
-        firstname = firstname,
-        lastname = lastname,
-        IDnumber = id_number,
-        FolderNumber = folder_number,
-        phone = phone,
-        Email = Email,
-        address1 = address1)
+        firstname=firstname,
+        lastname=lastname,
+        IDnumber=id_number,
+        FolderNumber=folder_number,
+        phone=phone,
+        Email=Email,
+        address1=address1)
 
     patient.save()
 

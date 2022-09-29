@@ -5,64 +5,28 @@
 
   <title>USER LOG IN</title>
   {% load static %}
-   <link rel="stylesheet" href="{% static 'home.css' %}">
+   <link rel="stylesheet" href="{% static 'login.css' %}">
 </head>
 
 <body>
   <header>
-    <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
+    <img class="pic" src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
     <h2>Medlyft</h2>
     <p>This is where the trademark will be</p>
   </header>
 
-  <main>
-    <form action="/medlyft/home" method="post">
-      {% csrf_token %}
 
-      <div class="imgcontainer">
-        <img class="avatar" src="{% static 'images/image.png' %}" alt="Avatar">
-      </div>
+  {% comment %} <div class="imgcontainer">
+    <img class="avatar" src="{% static 'images/image.png' %}" alt="Avatar">
+  </div> {% endcomment %}
+<nav>
+  <ul>
     
-      <div class="container-class">
-        <label for="User-type">User type</label>
-        <br>
-        <select name="User-type" id="user-type">
-          <option value="Patient">Patient</option>
-          <option value="Doctor">Doctor</option>
-        </select>
-        <br>
-        <br>
+  <li><a href="/medlyft/loginpatient" class="loginpatient">Patient login page</a></li>
+  <li><a href="/medlyft/logindoctor" class="logindoctor">Doctor login page</a></li>
 
-        <label for="Username"><b>Username</b></label>
-        <br>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        <br>
-        <br>
-
-        <label for="psw"><b>Password</b></label>
-        <br>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        <br>
-        <br>
-
-        <input type="submit" value="Login">
-        <br>
-        <br>
-
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-        <br>
-        <br>
-      </div>
-    
-      <div class="forgot-password">
-          <div style="margin: auto; width: 400px;">
-              <span class="psw">Forgot <a href="#">password?</a></span>
-          </div>
-      </div>
-    </form> 
-  </main>
+  </ul>
+</nav>
 
   <footer>
     Copyright &copy; 2022, Synigency, Inc. All

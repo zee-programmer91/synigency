@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>USER LOG IN</title>
+  {% load static %}
+   <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+
+<body>
+  <header>
+    <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
+    <h2>Medlyft</h2>
+    <p>This is where the trademark will be</p>
+  </header>
+
+  <main>
+    <form action="/medlyft/patientPage" method="post">
+      {% csrf_token %}
+
+      {% comment %} <div class="imgcontainer">
+        <img class="avatar" src="{% static 'images/image.png' %}" alt="Avatar">
+      </div> {% endcomment %}
+    
+      <div class="container-class">
+        <p>Patient login site</p>
+
+        <label for="Username"><b>ID Number</b></label>
+        <br>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <br>
+        <br>
+
+        <label for="psw"><b>Password</b></label>
+        <br>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <br>
+        <br>
+
+        <input type="submit" value="Login">
+        <br>
+        <br>
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <br>
+        <br>
+      </div>
+    
+      <div class="forgot-password">
+          <div style="margin: auto; width: 400px;">
+              <span class="psw">Forgot <a href="#">password?</a></span>
+          </div>
+      </div>
+    </form> 
+  </main>
+
+  <footer>
+    Copyright &copy; 2022, Synigency, Inc. All
+  </footer>
+</body>
+</html>

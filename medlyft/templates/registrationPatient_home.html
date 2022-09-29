@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Document</title>
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+   <header>
+      <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
+      <h2>Medlyft</h2>
+      <p>This is where the trademark will be</p>
+   </header>
+
+   <main>
+      <h1>Welcome to Sweden, {{clinic.clinic_name}}</h1>
+
+      <a href="/medlyft/add-doctor" name="add_doctor" value="{{clinic.clinic_name}}">Add Doctor</a>
+      <br>
+      <a href="/medlyft/add-patient">Add Patient</a>
+   </main>
+
+   <footer>
+      Copyright &copy; 2022, Synigency, Inc. All
+   </footer>
+</body>
+</html>

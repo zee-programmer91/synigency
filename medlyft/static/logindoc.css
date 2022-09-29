@@ -1,0 +1,12 @@
+.avatar {
+    width: 30%;
+    /* margin: 1.6666666%; */
+    margin: calc(10%/6);
+}
+
+.ava {
+    width: 10%;
+    height: 10%;
+    /* margin: 1.6666666%; */
+    margin: calc(10%/6);
+}
