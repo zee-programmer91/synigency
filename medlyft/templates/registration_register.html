@@ -6,88 +6,95 @@
    <title>Registration</title>
    {% load static %}
    <link rel="stylesheet" href="{% static 'registration.css' %}">
+   <link rel="stylesheet" href="{% static 'login.css' %}">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
-<body style="background-image : url('../static/images/types-of-doctors-1600114658.jpg');">
-   <header>
-      <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
-      <h2>Medlyft</h2>
-      <p>This is where the trademark will be</p>
-   </header>
+<body class="container" style="background-image : url('../static/images/types-of-doctors-1600114658.jpg');">
+   <div class="uni-card container">
+      <header>
+         <img class="pic logo-img" src="{% static 'images/logo.png' %}" alt="Company Logo" srcset="">
+         <h2>Medlyft</h2>
+         <p>This is where the trademark will be</p>
+      </header>
 
-   <main>
-      <h1 style=" width: 50vw; margin-left : 25vw">
-         Please complete the form below to register your clinic:
-      </h1>
+      <main>
+         <h1>
+            Please complete the form below to register your clinic:
+         </h1>
+   
+         <form action="registration/" method="post" >
+            <span hidden>{% csrf_token %}</span>
+   
+            <label for="Name">Clinic Name:</label><br>
+            <input type="text" name="Name" id="Name" autocomplete ="on" autofocus required>
+            <br>
+            <br>
+   
+            <label for="Province">Province:</label>
+            <br>
+            <select class="pro" name="Province" id="Province" autocomplete="on" required autofocus>
+               <option value="None" > </option>
+               <option value="Gauteng">Gauteng</option>
+               <option value="Free State">Free State</option>
+               <option value="North West">North West</option>
+               <option value="Eastern Cape">Eastern Cape</option>
+               <option value="Northern Cape">Northern Cape</option>
+               <option value="Kwa-Zulu Natal">Kwa-Zulu Natal</option>
+               <option value="Limpopo">Limpopo</option>
+               <option value="Western Cape">Western Cape</option>
+               <option value="Mpumalanga">Mpumalanga</option>
+            </select>
+   
+            <br><br>
+            <label for="Region">Region/Municipality:</label><br>
+            <input type="text" name="Region" id="Region" autocomplete ="on" required autofocus>
+            <br>
+            <br>
+            <label for="ward">Ward:</label>
+            <br>
+            <select class="pro" name="Ward" id="Ward" autocomplete="on" required autofocus>
+   
+               <option value="None" > </option>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+               <option value="6">6</option>
+               <option value="7">7</option>
+               <option value="8">8</option>
+               <option value="9">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+               <option value="13">13</option>
+               <option value="14">14</option>
+               <option value="15">15</option>
+            </select><br>
+   
+            <br>
+            <br>
+            <label for="Phone">Telephone Number:</label><br>
+            <input type="text" name="Phone" id="Phone"  required>
+            <br>
+            <br>
+            <label for="Password">Password:</label><br>
+            <input type="password" name="Password" id="Password" required>
+            <br>
+            <br>
+            <label for="ConfirmPassword">Confirm Password:</label><br>
+            <input type="password" name="ConfirmPassword" id="ConfirmPassword" required>
+            <br>
+   
+            <input class="btn std-btn-blue" type="submit" value="Register">
 
-      <form action="registration/" method="post" >
-         <span hidden>{% csrf_token %}</span>
+            <br><br>
+         </form>
+      </main>
+   </div>
 
-         <label for="Name">Clinic Name:</label><br>
-         <input type="text" name="Name" id="Name" autocomplete ="on" autofocus required>
-         <br>
-         <br>
-
-         <label for="Province">Province:</label>
-         <br>
-         <select class="pro" name="Province" id="Province" autocomplete="on" required autofocus>
-            <option value="None" > </option>
-            <option value="Gauteng">Gauteng</option>
-            <option value="Free State">Free State</option>
-            <option value="North West">North West</option>
-            <option value="Eastern Cape">Eastern Cape</option>
-            <option value="Northern Cape">Northern Cape</option>
-            <option value="Kwa-Zulu Natal">Kwa-Zulu Natal</option>
-            <option value="Limpopo">Limpopo</option>
-            <option value="Western Cape">Western Cape</option>
-            <option value="Mpumalanga">Mpumalanga</option>
-         </select>
-
-         <br><br>
-         <label for="Region">Region/Municipality:</label><br>
-         <input type="text" name="Region" id="Region" autocomplete ="on" required autofocus>
-         <br>
-         <br>
-         <label for="ward">Ward:</label>
-         <br>
-         <select class="pro" name="Ward" id="Ward" autocomplete="on" required autofocus>
-
-            <option value="None" > </option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-         </select><br>
-
-         <br>
-         <br>
-         <label for="Phone">Telephone Number:</label><br>
-         <input type="text" name="Phone" id="Phone"  required>
-         <br>
-         <br>
-         <label for="Password">Password:</label><br>
-         <input type="password" name="Password" id="Password" required>
-         <br>
-         <br>
-         <label for="ConfirmPassword">Confirm Password:</label><br>
-         <input type="password" name="ConfirmPassword" id="ConfirmPassword" required>
-         <br>
-         <br>
-
-         <input type="submit" value="Register" size="500">
-      </form>
-   </main>
+   
 
    <footer>
       Copyright &copy; 2022, Synigency, Inc. All

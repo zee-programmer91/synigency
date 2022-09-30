@@ -7,73 +7,74 @@
     <title>AddPatient</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'add_doc_and_pat.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body >
-  <header>
-    <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
-    <h2>Medlyft</h2>
-    <p>This is where the trademark will be</p>
-  </header>
+  <div class="uni-card container">
+    <header>
+      <img class="pic logo-img" src="{% static 'images/logo.png' %}" alt="Company Logo" srcset="">
+      <h2>Medlyft</h2>
+      <p>This is where the trademark will be</p>
+    </header>
 
-  <main>
-    <form action="/medlyft/save-doctor" method="post">
-      {% csrf_token %}
-      <p>
-        <label for="institution">Institution </label>
-        <input id="institution" name="institution" type="text" value="{{clinic.clinic_name}}" disabled>
-      </p>
-      <p>
-        <label for="firstname">First Name </label>
-        </p>
-      <p> 
-        <input id="firstname" name="fname" type="text" required>
-      </p>
+    <br>
 
-      <p>
-        <label for="lastname">Last Name </label> 
-      </p>
-      <p>
-        <input id="lastname" name="lname" type="text" required>
-      </p>
+    <main>
+      <form action="/medlyft/save-doctor" method="post">
+        {% csrf_token %}
+          <label for="institution">Institution </label>
+          <br>
+          <input class="form-control" id="institution" name="institution" type="text" value="{{clinic.clinic_name}}" disabled>
+        
+        
+          <label for="firstname">First Name </label>
+           
+          <input class="form-control" id="firstname" name="fname" type="text" required>
+        
+  
+          <label for="lastname">Last Name </label> 
+        
+          <input class="form-control" id="lastname" name="lname" type="text" required>
+        
+  
+          <label for="IDnumber">ID Number</label>
+          
 
-      <p>
-        <label for="IDnumber">ID Number</label>
-        </p>
-        <p>
-        <input type="id" id="IDnumber" name="id">
-      </p>
+          <input class="form-control" type="id" id="IDnumber" name="id">
+        
+  
+          <label for="RegistrationNumber">Doctor Registration Number</label>
+        
+          <input class="form-control" type="number" id="RegistrationNumber" name="reg_id"> 
+        
+  
+          <label>
+            Speciality
+          </label>
+          <br>
+          <select class="form-control" name="specializationList">
+            <option>--None--</option>
+            <option>General practitioner</option>
+            <option>obstetrician and gynaecologist</option>
+            <option>Psychiatrist</option>
+            <option>Dentist</option>
+            <option>General surgeon</option>
+            <option>Dermatologist</option>
+          </select>
+        
+          <br>
+          <input class="form-control btn std-btn-blue" type="submit" style="width: 200px;" value="Add Doctor">
+        
+      </form>
+    </main>
+    <br>
+    <footer>
+      Copyright &copy; 2022, Synigency, Inc. All
+    </footer>
+    <br>
+  </div>
 
-      <p>
-        <label for="RegistrationNumber">Doctor Registration Number</label>
-      </p>
-      <p>
-        <input type="number" id="RegistrationNumber" name="reg_id"> 
-      </p>
-
-      <p>
-        <label>
-          Speciality
-        </label>
-        <br>
-        <select name="specializationList">
-          <option>--None--</option>
-          <option>General practitioner</option>
-          <option>obstetrician and gynaecologist</option>
-          <option>Psychiatrist</option>
-          <option>Dentist</option>
-          <option>General surgeon</option>
-          <option>Dermatologist</option>
-        </select>
-      </p>
-
-      <p>
-        <input type="submit" value="Add Doctor">
-      </p>
-    </form>
-  </main>
-
-  <footer>
-    Copyright &copy; 2022, Synigency, Inc. All
-  </footer>
+  
 </body>
 </html>

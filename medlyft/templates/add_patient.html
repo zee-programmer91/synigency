@@ -7,76 +7,85 @@
     <title>AddPatient</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'add_doc_and_pat.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
 <body >
-  <header>
-    <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
-    <h2>Medlyft</h2>
-    <p>This is where the trademark will be</p>
-  </header>
+  <div class="container uni-card">
+    <header>
+      <img class="pic logo-img"  src="{% static 'images/logo.png' %}" alt="Company Logo" srcset="">
+      <h2>Medlyft</h2>
+      <p>This is where the trademark will be</p>
+    </header>
 
-  <main>
-    <form action="/medlyft/save-patient" method="post">
-      {% csrf_token %}
-      <p>
-        <label for="firstname">First Name </label>
-      </p>
-      <p>
-        <input id="firstname" name="fname" type="text" required>
-      </p>
+    <main>
+      <form action="/medlyft/save-patient" method="post">
+        {% csrf_token %}
+        <p>
+          <label for="firstname">First Name </label>
+        </p>
+        <p>
+          <input class="form-control" style="width: 400px; margin: auto;" id="firstname" name="fname" type="text" required>
+        </p>
+  
+        <p>
+          <label for="lastname">Last Name </label>
+        </p>
+        <p>
+          <input class="form-control" style="width: 400px; margin: auto;" id="lastname" name="lname" type="text" required>
+        </p>
+  
+        <p>
+          <label for="IDnumber">ID Number</label>
+        </p>
+        <p>
+          <input class="form-control" style="width: 400px; margin: auto;" type="number" id="IDnumber" name="id">
+        </p>
+  
+        <p>
+          <label for="FolderNumber">Folder Number</label>
+        </p>
+  
+        <p>
+          <input class="form-control" style="width: 400px; margin: auto;" type="number" min="1" max="120" step="1" id="FolderNumber" name="fnumber" pattern="\d+"> 
+        </p>
+  
+        <p>
+          <label for="phone">cell phone number</label>
+        </p>
+        <p>
+          <input class="form-control" style="width: 400px; margin: auto;" type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0712345678" required>
+        </p>
+  
+        <p>
+          <label for="Email">What's your e-mail address?</label>
+        </p> 
+        <p>
+          <input class="form-control" style="width: 400px; margin: auto;" type="email" id="Email" name="email">
+        </p>
+  
+        <p>
+          <label for="address1">Address</label>
+        </p>
+        <p>
+          <input class="form-control" style="width: 400px; margin: auto;" id="address1" name="address1" type="text" required>
+        </p>
+        
+        <p>
+          <input style="width: 200px;" class="form-control btn std-btn-blue" type="submit" value="Add Patient">
+        </p>
+      </form>
+    </main>
+  
+    <br>
+    <footer>
+      Copyright &copy; 2022, Synigency, Inc. All
+    </footer>
+    <br>
+  </div>
+  
 
-      <p>
-        <label for="lastname">Last Name </label>
-      </p>
-      <p>
-        <input id="lastname" name="lname" type="text" required>
-      </p>
-
-      <p>
-        <label for="IDnumber">ID Number</label>
-      </p>
-      <p>
-        <input type="number" id="IDnumber" name="id">
-      </p>
-
-      <p>
-        <label for="FolderNumber">Folder Number</label>
-      </p>
-
-      <p>
-        <input type="number" min="1" max="120" step="1" id="FolderNumber" name="fnumber" pattern="\d+"> 
-      </p>
-
-      <p>
-        <label for="phone">cell phone number</label>
-      </p>
-      <p>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="0712345678" required>
-      </p>
-
-      <p>
-        <label for="Email">What's your e-mail address?</label>
-      </p> 
-      <p>
-        <input type="email" id="Email" name="email">
-      </p>
-
-      <p>
-        <label for="address1">Address</label>
-      </p>
-      <p>
-        <input id="address1" name="address1" type="text" required>
-      </p>
-      
-      <p>
-        <input type="submit" value="Add Patient">
-      </p>
-    </form>
-  </main>
-
-  <footer>
-    Copyright &copy; 2022, Synigency, Inc. All
-  </footer>
+  
 </body>
 </html>

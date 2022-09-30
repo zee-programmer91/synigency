@@ -18,25 +18,28 @@
          <h2>Medlyft</h2>
          <p>This is where the trademark will be</p>
       </header>
-      <h1>Welcome to Sweden, {{clinic.clinic_name}}</h1>
+      <h1>Welcome to Medlyft {{clinic.clinic_name}}</h1>
       <br>
       <br>
       <nav>
          <ul>
    
-         <li><a href="/medlyft/registration" class="register btn std-btn-blue">REGISTER</a></li> 
+         <!-- <li><a href="/medlyft/registration" class="register btn std-btn-blue">REGISTER</a></li>  -->
    
          <li><a href="/medlyft/add-doctor" class="register btn std-btn-blue" name="add_doctor" value="{{clinic.clinic_name}}">Add Doctor</a></li>
        
          <li><a href="/medlyft/add-patient" class="register btn std-btn-blue">Add Patient</a></li>
          </ul>
       </nav>
+
+      <footer style="margin: bottom;">
+         Copyright &copy; 2022, Synigency, Inc. All
+      </footer>
+      <br>
    </div>
 
 
 
-   <footer>
-      Copyright &copy; 2022, Synigency, Inc. All
-   </footer>
+   
 </body>
 </html>

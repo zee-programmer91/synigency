@@ -37,7 +37,7 @@ input[type=password] {
     border-radius:10px;
     box-sizing: border-box;
 }
-input[type=submit] {
+/* input[type=submit] {
    background-color: #0000FF;
    color: #fff;
    border: none;
@@ -52,4 +52,4 @@ input[type=submit] {
 }
 input[type=submit]:hover{
   background-color: #008000;
-}
+} */
