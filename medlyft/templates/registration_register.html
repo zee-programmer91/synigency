@@ -23,17 +23,17 @@
             Please complete the form below to register your clinic:
          </h1>
    
-         <form action="registration/" method="post" >
+         <form action="home" method="post" >
             <span hidden>{% csrf_token %}</span>
    
             <label for="Name">Clinic Name:</label><br>
-            <input type="text" name="Name" id="Name" autocomplete ="on" autofocus required>
+            <input class="form-control" type="text" name="Name" id="Name" autocomplete ="on" autofocus required>
             <br>
             <br>
    
             <label for="Province">Province:</label>
             <br>
-            <select class="pro" name="Province" id="Province" autocomplete="on" required autofocus>
+            <select class="form-select" name="Province" id="Province" autocomplete="on" required>
                <option value="None" > </option>
                <option value="Gauteng">Gauteng</option>
                <option value="Free State">Free State</option>
@@ -48,14 +48,14 @@
    
             <br><br>
             <label for="Region">Region/Municipality:</label><br>
-            <input type="text" name="Region" id="Region" autocomplete ="on" required autofocus>
+            <input class="form-control" type="text" name="Region" id="Region" autocomplete ="on" required autofocus>
             <br>
             <br>
             <label for="ward">Ward:</label>
             <br>
-            <select class="pro" name="Ward" id="Ward" autocomplete="on" required autofocus>
+            <select class="form-select" name="Ward" id="Ward" autocomplete="on">
    
-               <option value="None" > </option>
+               <option value="None"> </option>
                <option value="1">1</option>
                <option value="2">2</option>
                <option value="3">3</option>
@@ -76,18 +76,18 @@
             <br>
             <br>
             <label for="Phone">Telephone Number:</label><br>
-            <input type="text" name="Phone" id="Phone"  required>
+            <input class="form-control" type="text" name="Phone" id="Phone"  required>
             <br>
             <br>
             <label for="Password">Password:</label><br>
-            <input type="password" name="Password" id="Password" required>
+            <input class="form-control" type="password" name="Password" id="Password" required>
             <br>
             <br>
             <label for="ConfirmPassword">Confirm Password:</label><br>
-            <input type="password" name="ConfirmPassword" id="ConfirmPassword" required>
+            <input class="form-control" type="password" name="ConfirmPassword" id="ConfirmPassword" required>
             <br>
    
-            <input class="btn std-btn-blue" type="submit" value="Register">
+            <input class="form-control" type="submit" value="Register">
 
             <br><br>
          </form>

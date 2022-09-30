@@ -1,18 +1,17 @@
-
-body{
-    background-color: lightgray;
-    text-align: center;
+body {
+  background-color: lightgray;
+  text-align: center;
 }
 
-h1{
-   color: red;
+h1 {
+  color: red;
 }
 
-label{
-    font-weight: bold;
+label {
+  font-weight: bold;
 }
 
-input[type=text] {
+/* input[type=text] {
   width: 45%;
   padding: 10px 10px;
   border-color: red;
@@ -28,15 +27,16 @@ input[type=password] {
   border-color: red;
   border-radius:10px;
   box-sizing: border-box;
+} */
+.pro {
+  width: 45%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  border-color: red;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
-.pro{
-    width: 45%;
-    padding: 10px 10px;
-    margin: 8px 0;
-    border-color: red;
-    border-radius:10px;
-    box-sizing: border-box;
-}
+
 /* input[type=submit] {
    background-color: #0000FF;
    color: #fff;

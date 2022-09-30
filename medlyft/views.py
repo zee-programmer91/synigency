@@ -60,9 +60,9 @@ def admin(request):
     return HttpResponse(template.render({}, request))
 
 
-def register_home(request):
+def home(request):
     clinic = Clinic.objects.all()[0]
-    template = loader.get_template("registration_home.html")
+    template = loader.get_template("home.html")
     content = {
         'clinic': clinic,
     }
