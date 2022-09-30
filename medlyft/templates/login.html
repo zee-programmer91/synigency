@@ -6,27 +6,35 @@
   <title>USER LOG IN</title>
   {% load static %}
    <link rel="stylesheet" href="{% static 'login.css' %}">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
 <body>
-  <header>
-    <img class="pic" src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
-    <h2>Medlyft</h2>
-    <p>This is where the trademark will be</p>
-  </header>
 
-
-  {% comment %} <div class="imgcontainer">
-    <img class="avatar" src="{% static 'images/image.png' %}" alt="Avatar">
-  </div> {% endcomment %}
-<nav>
-  <ul>
-    
-  <li><a href="/medlyft/loginpatient" class="loginpatient">Patient login page</a></li>
-  <li><a href="/medlyft/logindoctor" class="logindoctor">Doctor login page</a></li>
-
-  </ul>
-</nav>
+  <br>
+  <div class="uni-card">
+    <header class="container" width="50" height="50">
+      <br>
+      <img class="pic logo-img" src="{% static 'images/logo.png' %}" alt="Company Logo" srcset="">
+      <br><br>
+      <h2>Medlyft</h2>
+      <p>This is where the trademark will be</p>
+    </header>
+  
+  
+    {% comment %} <div class="imgcontainer">
+      <img class="avatar" src="{% static 'images/image.png' %}" alt="Avatar">
+    </div> {% endcomment %}
+  <nav>
+    <ul>
+      
+    <li><a href="/medlyft/loginpatient" class="loginpatient btn std-btn-blue">Patient login page</a></li>
+    <li><a href="/medlyft/logindoctor" class="logindoctor btn std-btn-blue">Doctor login page</a></li>
+  
+    </ul>
+  </nav>
+  
+  </div>
 
   <footer>
     Copyright &copy; 2022, Synigency, Inc. All

@@ -7,19 +7,41 @@
     <title>Document</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'patientPage.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Patient </h1>
+<body class="container">
+    <h1>Patient</h1>
+    <hr>
+
 
      
-
-
-    
-        <ul>
-        <li><aside>
-            <details>
-
-                <summary style="color:red ">View Delivery Status </summary>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                View Delivery Status
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="div1">
+                    Shipping Date: 20-10-2022 10:00SAT
+                </div>
+                <div class="div2">
+                    Colection Date: 20-10-2022 11:00SAT
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                View Delivery Status 
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
                 <div class="div1">
                     Shipping Date: 20-10-2022 10:00SAT
                 </div>
@@ -29,37 +51,19 @@
                 <div class="div2">
                     Colection Date: 20-10-2022 11:00SAT
                 </div>
-            
+            </div>
+          </div>
+        </div>
 
 
-            </details>
-        </aside> </li>
-
-
-        <li><aside>
-            <details>
-
-                <summary style="color:red ">View Delivery History </summary>
-                <div class="div1">
-                    Shipped Date: 20-08-2022 10:00SAT
-                </div>
-            
-                <br>
-            
-                <div class="div2">
-                    Collected Date: 10-09-2022 11:00SAT
-                </div>
-            
-
-
-            </details>
-        </aside> </li>
-
-
-        <li><aside>
-            <details>
-
-                <summary style="color:red ">View profile </summary>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              View Patient Profile
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
                 <div class="div1">
                     <div class="imgcontainer">
                         <img class="avatar" src="{% static 'images/IMG_0150.jpg' %}" alt="Avatar">
@@ -73,12 +77,13 @@
                     <p>soshanguve 0152 1134 f-west</p>
                     <p></p>
                 </div>
-            
+                
+            </div>
+          </div>
+        </div>
+      </div>
 
-
-            </details>
-        </aside> </li>
-
-    </ul>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 </body>
 </html>

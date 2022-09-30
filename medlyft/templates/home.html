@@ -6,31 +6,31 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    {% load static %}
    <link rel="stylesheet" href="{% static 'home.css' %}">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
    <title>Home</title>
 </head>
-<body>
-   <header>
-<!--      <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">-->
-      <h2>Medlyft</h2>
-      <p>This is where the trademark will be</p>
-   </header>
+<body class="container">
 
-   <nav>
-
-      <ul>   
-
-      <li><a href="/medlyft/login" class="login">LOGIN</a></li>
+   <br>
+   <div class="uni-card container">
+      <header>
+         <!-- <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">-->
+         <h2>Medlyft</h2>
+         <p>This is where the trademark will be</p>
+      </header>
       
-      <li>  <a href="/medlyft/addminlogin" class="register">clinic Admin</a></li> 
+      <br><br>
 
-      </ul> 
-      
+      <nav>
+         <ul style="margin: auto;">   
+            <li><a href="/medlyft/login" class="btn std-btn-blue">LOGIN</a></li>
+            <li><a href="/medlyft/addminlogin" class="btn std-btn-blue">clinic Admin</a></li> 
+         </ul> 
+      </nav>
+      <br>
+   </div>
 
-   </nav>
 
-   <main>
-      
-   </main>
 
    <footer>
       Copyright &copy; 2022, Synigency, Inc. All

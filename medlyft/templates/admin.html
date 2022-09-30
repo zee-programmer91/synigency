@@ -8,25 +8,32 @@
    <title>Document</title>
    {% load static %}
    <link rel="stylesheet" href="{% static 'admin.css' %}">
+   <link rel="stylesheet" href="{% static 'login.css' %}">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
-   <header>
-      <img src="{% static 'images/SynigencyLogo.png' %}" alt="Company Logo" srcset="">
-      <h2>Medlyft</h2>
-      <p>This is where the trademark will be</p>
-   </header>
-   <h1>Welcome to Sweden, {{clinic.clinic_name}}</h1>
+   <div class="uni-card container">
+      <header>
+         <img class="pic logo-img" src="{% static 'images/logo.png' %}" alt="Company Logo" srcset="">
+         <h2>Medlyft</h2>
+         <p>This is where the trademark will be</p>
+      </header>
+      <h1>Welcome to Sweden, {{clinic.clinic_name}}</h1>
+      <br>
+      <br>
+      <nav>
+         <ul>
+   
+         <li><a href="/medlyft/registration" class="register btn std-btn-blue">REGISTER</a></li> 
+   
+         <li><a href="/medlyft/add-doctor" class="register btn std-btn-blue" name="add_doctor" value="{{clinic.clinic_name}}">Add Doctor</a></li>
+       
+         <li><a href="/medlyft/add-patient" class="register btn std-btn-blue">Add Patient</a></li>
+         </ul>
+      </nav>
+   </div>
 
-   <nav>
-      <ul>
 
-      <li><a href="/medlyft/registration" class="register">REGISTER</a></li> 
-
-      <li><a href="/medlyft/add-doctor" name="add_doctor" value="{{clinic.clinic_name}}">Add Doctor</a></li>
-    
-      <li><a href="/medlyft/add-patient">Add Patient</a></li>
-      </ul>
-   </nav>
 
    <footer>
       Copyright &copy; 2022, Synigency, Inc. All

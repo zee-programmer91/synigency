@@ -28,3 +28,31 @@ a:hover {
     border-radius: 10px;
     text-shadow: rgb(117, 189, 36);
 }
+
+.logo-img {
+    width: 200px !important;
+    border-radius: 100px;
+ }
+
+
+ .uni-card {
+    margin: auto;
+    border-radius: 40px;
+    background: rgb(239,92,46);
+    background: linear-gradient(90deg, rgba(239,92,46,1) 0%, rgba(239,46,51,1) 100%);
+    width: 500px !important;
+    text-align: center;
+ }
+ 
+ .uni-card * {
+    color: white;
+ }
+
+ .std-btn-blue {
+    background: rgb(121,219,241) !important;
+    background: linear-gradient(90deg, rgba(121,219,241,1) 0%, rgba(99,141,187,1) 100%) !important;
+    border-radius: 100px !important;
+    border: none;
+ }
+ 
+ 

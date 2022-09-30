@@ -39,32 +39,6 @@ li {
    padding: 0;
 }
 
-ul {
-
-   flex: 1;
-   max-width: 100%;
-   display: flex;
-   justify-content: space-evenly;
-
-}
-
-a:hover {
-   background-color: blueviolet;
-   border-radius: 10px;
-   text-shadow: rgb(117, 189, 36);
-}
-
-
-
-/* nav a {
-   background-color: rgb(206, 159, 31);
-   display: inline-block;
-   height: 50px;
-   padding-top: 30px;
-   text-decoration: none;
-   width: 600px;
-   border-radius: 20px;
-} */
 
 nav button:hover {
    background-color: rgb(117, 189, 36);
@@ -91,3 +65,24 @@ main form {
    background-color: #ffffff;
    padding: 10px;
 }
+
+.uni-card {
+   margin: auto;
+   border-radius: 40px;
+   background: rgb(239,92,46);
+   background: linear-gradient(90deg, rgba(239,92,46,1) 0%, rgba(239,46,51,1) 100%);
+   width: 500px !important;
+   text-align: center;
+}
+
+.uni-card * {
+   color: white;
+}
+
+.std-btn-blue {
+   background: rgb(121,219,241) !important;
+   background: linear-gradient(90deg, rgba(121,219,241,1) 0%, rgba(99,141,187,1) 100%) !important;
+   border-radius: 100px !important;
+   border: none;
+}
+
